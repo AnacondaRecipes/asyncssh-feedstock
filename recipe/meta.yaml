@@ -33,7 +33,7 @@ requirements:
     - libnacl >=1.4.2
     - python-pkcs11 >=0.7.0
     - pyopenssl >=23.0.0
-    - pywin32 >=227
+    - pywin32 >=227  # [win]    
 
 test:
   requires:
