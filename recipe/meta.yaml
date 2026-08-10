@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vvv
-  skip: true  # [py<310]
+  skip: True  # [py<310]
 
 requirements:
   host:
@@ -26,14 +26,11 @@ requirements:
   run_constrained:
     - bcrypt >=3.1.3
     - fido2 >=2
-    - gssapi >=1.2.0
-    - libnacl >=1.4.2
-    - python-pkcs11 >=0.7.0
-    - pyOpenSSL >=23.0.0
-    - pywin32 >=227  # [win]
     - python-gssapi >=1.2.0
     - ifaddr >=0.2.0
-    - pywin32-on-windows >=227
+    - python-pkcs11 >=0.7.0
+    - pyopenssl >=23.0.0
+    - pywin32 >=227  # [win]
 
 test:
   requires:
@@ -61,7 +58,7 @@ about:
   summary: Asynchronous SSHv2 client and server library
   description: |
     AsyncSSH is a Python package which provides an asynchronous client and server implementation of the SSHv2 protocol
-    on top of the Python 3.6+ asyncio framework.
+    on top of the Python 3.10+ asyncio framework.
   doc_url: https://asyncssh.readthedocs.io
   dev_url: https://github.com/ronf/asyncssh
 
