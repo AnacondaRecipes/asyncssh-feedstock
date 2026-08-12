@@ -47,8 +47,8 @@ test:
     - tests
   commands:
     - pip check
-    # Windows tests take days in CI and Linux fails things that pass locally.
-    - pytest -v tests -k "not (test_utime or test_forward_local_port_pause or test_ssh_listen_tunnel_default_port or test_setstat_v4)"  # [osx]
+    # Windows tests take days in CI, Linux fails things that pass locally, and test_match_local_network needs the ifaddr module, which isn't packaged in the main channel.
+    - pytest -v tests -k "not (test_utime or test_forward_local_port_pause or test_ssh_listen_tunnel_default_port or test_setstat_v4 or test_match_local_network)"  # [osx]
 
 about:
   home: https://github.com/ronf/asyncssh
